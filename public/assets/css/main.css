@@ -258,7 +258,7 @@
     color: #999999;
     line-height: 1.2;
   
-    display: block;
+    display: none;
     position: absolute;
     pointer-events: none;
     width: 100%;
@@ -290,8 +290,6 @@
     -moz-transition: all 0.4s;
     transition: all 0.4s;
   }
-  
-  /*---------------------------------------------*/
   
   .focus-input100 {
     position: absolute;
@@ -346,6 +344,7 @@
   }
   
   .input100:focus + .focus-input100 + .label-input100 {
+    display: block;
     top: 14px;
     font-size: 13px;
   }

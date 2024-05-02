@@ -38,40 +38,39 @@
 						<strong>ĐĂNG KÝ</strong>
 					</span>
 					
-					
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
+						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Email</span>
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Password</span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Fname is required">
-						<input class="input100" type="text" name="fname">
+						<input class="input100" type="text" name="fname" placeholder="Họ">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Họ</span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Lname is required">
-						<input class="input100" type="text" name="lname">
+						<input class="input100" type="text" name="lname" placeholder="Tên">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Tên</span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Age is required">
-						<input class="input100" type="text" name="age">
+						<input class="input100" type="text" name="age" placeholder="Tuổi">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Tuổi</span>
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="phone">
+						<input class="input100" type="text" name="phone" placeholder="Số điện thoại">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Số điện thoại</span>
 					</div>
