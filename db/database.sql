@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 19, 2022 lúc 12:29 PM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.1.2
+-- Thời gian đã tạo: Th5 02, 2024 lúc 07:15 AM
+-- Phiên bản máy phục vụ: 10.4.32-MariaDB
+-- Phiên bản PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `web`
 --
-CREATE DATABASE IF NOT EXISTS `web` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `web`;
 
 -- --------------------------------------------------------
 
@@ -35,17 +33,18 @@ CREATE TABLE `admin` (
   `init` varchar(255) DEFAULT '0',
   `createAt` datetime DEFAULT NULL,
   `updateAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `admin`
 --
 
 INSERT INTO `admin` (`username`, `password`, `init`, `createAt`, `updateAt`) VALUES
-('admin', '$2y$10$.wfh0Um7lxz2ao5NIJk6w.puqUnVpaWuqC901jXu7d05jOWEtqupe', '1', NULL, '2022-06-12 14:02:17'),
-('binhdang_admin', '$2y$10$blgreA15bi/TorsNDajtbucdM4RpTeqpzorUrXDyRzQ9rOPnkaHCO', '0', '2022-06-12 16:52:48', '2022-06-12 16:52:48'),
-('lethanhsang', '$2y$10$qzH1mOvBTpO9gkpCT2QmVObenFamHvwkY0ZRofn3oaaZWJb72KegW', '0', '2022-06-12 14:02:49', '2022-06-12 14:02:49'),
-('username', '$2y$10$W9N2Vx4FnhBX/.nMz35KGOQC4Jj6ysXxYgHaOwEhzntB3GY.8z8B6', '0', NULL, '2022-06-12 14:02:09');
+('admin', '$2y$10$opTajGLvTMMvmFh2jrHU5.lPhuoaSI1VcBhVrKbezA6GnRgigo6D6', '1', NULL, '2024-05-02 12:13:58'),
+('cac_admin', '$2y$10$BY8sE7paHyaquMkcLxbgo.OrirPRElHzYozVqEBqjhlcOQ0i4XPUq', '0', '2024-05-02 11:52:28', '2024-05-02 11:52:28'),
+('duyanh_admin', '$2y$10$bZuC3fDrH.0B02E2J0Ga7Ogo/PQSMbL6/ZAKvsNl2M/.e4/fp6IJa', '0', '2024-05-02 11:55:58', '2024-05-02 11:55:58'),
+('ngoc_admin', '$2y$10$KsFYCZDTGvLbU6RUdIja9eCVo4S1IKZxbJa4ykK5yFqamoLD6TMnC', '0', '2024-05-02 11:55:38', '2024-05-02 11:55:38'),
+('thao_admin', '$2y$10$PSO.j4HwtRWuwlT6SSH0auVDbveBUDpM.vGjLBvBdB2J0SfrWXqIi', '0', '2024-05-02 11:52:47', '2024-05-02 11:52:47');
 
 -- --------------------------------------------------------
 
@@ -61,23 +60,19 @@ CREATE TABLE `comment` (
   `news_id` int(11) DEFAULT NULL,
   `user_id` varchar(255) DEFAULT NULL,
   `parent` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `comment`
 --
 
 INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`, `parent`) VALUES
-(1, '2021-12-12 00:00:00', 1, 'Cảm ơn BTC đã tạo ra một sự kiện tuyệt vời đến như vậy', 1, 'lebinhdang@gmail.com', NULL),
-(2, '2021-12-12 00:00:00', 1, 'Bất ngờ quá', 1, 'cuthanhbang@hcmut.edu.vn', NULL),
-(3, '2021-12-12 00:00:00', 1, 'Bài viết rất hay, rất ý nghĩa', 2, 'migiry@hcmut.edu.vn', NULL),
-(4, '2022-06-10 21:28:42', 1, 'Hấp dẫn quá ạ, quá tuyệt vời', 1, 'lethanhsang@gmail.com', NULL),
-(5, '2022-06-11 02:48:42', 1, 'Rất bổ ích cho các bạn sinh viên', 2, 'lethanhsang@gmail.com', NULL),
-(20, '2022-06-19 10:30:49', 1, 'Chương trình rất hay và bổ ích ạ.', 1, 'lethanhsang@gmail.com', NULL),
-(21, '2022-06-19 10:31:47', 1, 'Bất ngờ quá', 1, 'lethanhsang@gmail.com', 2),
-(29, '2022-06-19 13:42:18', 1, 'Bài viết rất hay', 1, 'lethanhsang@gmail.com', NULL),
-(30, '2022-06-19 13:43:02', 1, 'Bài viết rất hay', 2, 'lethanhsang@gmail.com', 3),
-(33, '2022-06-19 13:44:49', 1, 'Bài viết rất hay', 2, 'lethanhsang@gmail.com', NULL);
+(1, '2024-05-02 12:01:18', 1, 'Tour vui lắm ạ :3', 2, 'doanthao@gmail.com', NULL),
+(2, '2024-05-02 12:02:05', 1, 'Gian hàng KMS năm nào cũng tưng bừng hết >.<', 1, 'doanthao@gmail.com', NULL),
+(3, '2024-05-02 12:08:08', 1, 'Chất lượng quá ạ', 1, 'cacle@gmail.com', NULL),
+(4, '2024-05-02 12:09:28', 1, '10 điểm không có nhưng', 1, 'baongoc@gmail.com', 2),
+(5, '2024-05-02 12:09:57', 1, 'Năm sau bên mình tổ chức tiếp đi ạ', 2, 'baongoc@gmail.com', NULL),
+(6, '2024-05-02 12:10:57', 1, 'Iu KMS nhiều ạ', 2, 'duyanh@gmail.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -91,7 +86,7 @@ CREATE TABLE `company` (
   `address` varchar(1000) DEFAULT NULL,
   `createAt` datetime DEFAULT NULL,
   `updateAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `company`
@@ -114,15 +109,15 @@ CREATE TABLE `news` (
   `description` varchar(1000) DEFAULT NULL,
   `content` varchar(10000) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `news`
 --
 
 INSERT INTO `news` (`id`, `status`, `date`, `description`, `content`, `title`) VALUES
-(1, 1, '2022-04-05 17:00:00', 'Chuyên nghiệp, nhiệt huyết, và cháy hết mình là những điều KMS nhận được từ các bạn sinh viên Bách Khoa trong Job Fair Chủ Nhật vừa qua.\nCùng nhìn lại những khoảnh khắc đáng nhớ qua album này nhé.', 'Chuyên nghiệp, nhiệt huyết, và cháy hết mình là những điều KMS nhận được từ các bạn sinh viên Bách Khoa trong Job Fair Chủ Nhật vừa qua.\n\n\n\n\n\n\nCùng nhìn lại những khoảnh khắc đáng nhớ qua album này nhé.', 'KMS x CSE Job Fair 2022 💙'),
-(2, 1, '2021-11-11 00:00:00', 'Cùng khởi động lại hành trình khám phá 360 độ về KMS Technology Vietnam với 80+ bạn sinh viên HCMUS và UIT trong KMS Tour 10/5 này', '⭐ KMS Fresher Program: Giải mã chi tiết chương trình tuyển dụng Fresher- cơ hội “cất cánh” sự nghiệp tại một trong những môi trường làm việc tốt nhất tại Việt Nam và châu Á.\n\n⭐ Alumni Talks: Chia sẻ đầy cảm hứng từ các KMSers là cựu sinh viên HCMUS và UIT.\n\n⭐ Office Tour & Project Visits: Tham quan văn phòng và tận mắt quan sát, tìm hiểu về các dự án.\n\n⭐ CV Clinic: Được tư vấn hoàn thiện và nâng cấp CV theo hình thức 1-1.\n\n⭐ Acoustic Show: Thưởng thức trà bánh, hòa mình vào show nhạc Acoustic tại coffee lounge.\n\nCác anh chị KMSers vô cùng háo hức và mong chờ vào cuộc hẹn này. Còn các bạn sinh viên thì sao? 😆', '[HCMC] KMS TOUR OFFLINE chính thức trở lại!');
+(1, 1, '2024-03-30 17:00:00', 'Chuyên nghiệp, nhiệt huyết, và cháy hết mình là những điều KMS nhận được từ các bạn sinh viên Bách Khoa trong Job Fair Chủ Nhật vừa qua.\nCùng nhìn lại những khoảnh khắc đáng nhớ qua album này nhé.', 'Chuyên nghiệp, nhiệt huyết, và cháy hết mình là những điều KMS nhận được từ các bạn sinh viên Bách Khoa trong Job Fair Chủ Nhật vừa qua.\n\n\n\n\n\n\nCùng nhìn lại những khoảnh khắc đáng nhớ qua album này nhé.', 'KMS x CSE Job Fair 2022 💙'),
+(2, 1, '2023-11-11 00:00:00', 'Cùng khởi động lại hành trình khám phá 360 độ về KMS Technology Vietnam với 80+ bạn sinh viên HCMUS và UIT trong KMS Tour 10/5 này', '⭐ KMS Fresher Program: Giải mã chi tiết chương trình tuyển dụng Fresher- cơ hội “cất cánh” sự nghiệp tại một trong những môi trường làm việc tốt nhất tại Việt Nam và châu Á.\n\n⭐ Alumni Talks: Chia sẻ đầy cảm hứng từ các KMSers là cựu sinh viên HCMUS và UIT.\n\n⭐ Office Tour & Project Visits: Tham quan văn phòng và tận mắt quan sát, tìm hiểu về các dự án.\n\n⭐ CV Clinic: Được tư vấn hoàn thiện và nâng cấp CV theo hình thức 1-1.\n\n⭐ Acoustic Show: Thưởng thức trà bánh, hòa mình vào show nhạc Acoustic tại coffee lounge.\n\nCác anh chị KMSers vô cùng háo hức và mong chờ vào cuộc hẹn này. Còn các bạn sinh viên thì sao? 😆', '[HCMC] KMS TOUR OFFLINE chính thức trở lại!');
 
 -- --------------------------------------------------------
 
@@ -137,7 +132,7 @@ CREATE TABLE `product` (
   `description` varchar(1000) DEFAULT NULL,
   `content` varchar(10000) DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `product`
@@ -166,18 +161,17 @@ CREATE TABLE `user` (
   `createAt` datetime DEFAULT NULL,
   `updateAt` datetime DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `user`
 --
 
 INSERT INTO `user` (`email`, `profile_photo`, `fname`, `lname`, `gender`, `age`, `phone`, `createAt`, `updateAt`, `password`) VALUES
-('cuthanhbang@hcmut.edu.vn', 'public/img/user/default.png', 'Cù Thanh', 'Bằng', 1, 20, '0123456789', NULL, NULL, '$2y$10$FMmsUnlpGd2VbE/E3gtj6erePv5mxEp2BZcWqFAbvDXHHaEZV0/8W'),
-('lebinhdang@gmail.com', 'public/img/user/default.png', 'Lê Bình', 'Đẳng', 1, 21, '0123456789', '2022-06-05 16:59:35', '2022-06-05 16:59:35', '$2y$10$nLUMBHdzrLK1mQbSfOBlY.R35CSYTO8.z5UVI37e3g.BxYIrcJT02'),
-('lethanhsang@gmail.com', 'public/img/user/2022_06_19_08_41_52am.jpg', 'Lê Thanh', 'Sang 123', 1, 22, '0123456789', '2022-06-03 16:41:50', '2022-06-19 13:41:52', '$2y$10$FMmsUnlpGd2VbE/E3gtj6erePv5mxEp2BZcWqFAbvDXHHaEZV0/8W'),
-('migiry@hcmut.edu.vn', 'public/img/user/default.png', 'Nguyễn Trần', 'MiGi', 0, 20, '0123456789', NULL, NULL, '$2y$10$FMmsUnlpGd2VbE/E3gtj6erePv5mxEp2BZcWqFAbvDXHHaEZV0/8W'),
-('sangle@gmail.com', 'public/img/user/2022_06_19_08_59_18am.jpg', 'Lê', 'Sang', 1, 21, '123456789', '2022-06-19 13:58:29', '2022-06-19 13:59:18', '$2y$10$cZXL.spt3RUhpndKRl7FfeiMTbl2FZUCxcBcIfzYJ//JKkVbXyNEa');
+('baongoc@gmail.com', 'public/img/user/default.png', 'Nguyễn Trần Bảo', 'Ngọc', 0, 21, '0123456789', '2024-05-02 12:08:52', '2024-05-02 12:08:52', '$2y$10$pwgcYgO3G4sY/U4wJ2lE5eP5U56G0WCL9s4bw082rwahxGHLQ.mCm'),
+('cacle@gmail.com', 'public/img/user/default.png', 'Lê Phương', 'Các', 1, 21, '0123456789', '2024-05-02 12:06:35', '2024-05-02 12:06:35', '$2y$10$BsRXOIbsKNKFcyHxcsUPeORQ72HOA03WyeS7ReEC88ZWyImbIvsd2'),
+('doanthao@gmail.com', 'public/img/user/2024_05_02_07_00_48am.jpg', 'Võ Nguyễn Đoan', 'Thảo', 0, 21, '0123456789', '2024-05-02 11:58:45', '2024-05-02 12:00:48', '$2y$10$P7Cjpf6tnbV4OX44mMaGWOuBKeHypVk8faLovZyGIBBAfSox/lwc6'),
+('duyanh@gmail.com', 'public/img/user/default.png', 'Lê Duy', 'Anh', 1, 21, '0123456789', '2024-05-02 12:10:21', '2024-05-02 12:10:21', '$2y$10$790eBNXFWVxsrUbAO5seHewRYtNVBAuyWlZkEn5q6LglU0IYrZnYi');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -230,7 +224,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `company`
