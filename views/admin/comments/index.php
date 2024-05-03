@@ -24,7 +24,7 @@ require_once('views/admin/content_layouts.php'); ?>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="page=admin&controller=layouts&action=index">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.php?page=admin&controller=layouts&action=index">Home</a></li>
                         <li class="breadcrumb-item active">Bình luận - Đánh giá</li>
                     </ol>
                 </div>
