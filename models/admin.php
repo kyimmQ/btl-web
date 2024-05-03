@@ -88,9 +88,9 @@ class Admin
             $admins[] = new Admin(
                 $admin['username'],
                 $admin['password'],
+                $admin['init'],
                 $admin['createAt'],
-                $admin['updateAt'],
-                $admin['init']
+                $admin['updateAt']
             );
         }
         return $admins;
