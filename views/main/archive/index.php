@@ -25,8 +25,27 @@
           <h2>Thành tựu</h2>
           <p>KMS đã đạt được gì?</p>
         </div>
-
+        
         <div class="row portfolio-container" data-aos="fade-up">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="https://kms-technology.com/wp-content/uploads/2023/10/GDD_0277-scaled.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Top 10 doanh nghiệp xuất khẩu phẩn mềm và dịch vụ CNTT</h4>
+              <p>2023</p>
+              <a href="https://kms-technology.com/wp-content/uploads/2023/10/GDD_0277-scaled.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Ngày 22 tháng 9 năm 2023 – Hà Nội, Việt Nam – KMS – nhà cung cấp dịch vụ phần mềm và giải pháp công nghệ số hàng đầu – vừa được vinh danh “10 Công ty Công nghệ Số Hàng đầu Việt Nam 2023” do Tổng cục Phần mềm & Dịch vụ CNTT Việt Nam (VINASA) tổ chức ở 3 hạng mục “Các công ty gia công phần mềm và dịch vụ CNTT”, “Các công ty giải pháp và dịch vụ Chuyển đổi số” và “Các công ty Fintech”."><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="https://kms-technology.com/wp-content/uploads/2022/09/ICT-2022.jpeg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Top 10 doanh nghiệp ICT Việt Nam</h4>
+              <p>2022</p>
+              <a href="https://kms-technology.com/wp-content/uploads/2022/09/ICT-2022.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lần thứ 3 liên tiếp, KMS Technology vinh dự được chọn vào “Top 10 công ty ICT” trên tổng số 147 đề cử thuộc 18 hạng mục khác nhau của ngành ICT. “10 công ty CNTT hàng đầu Việt Nam” là giải thưởng thường niên do VINASA tổ chức từ năm 2014. Mục tiêu của giải là ghi nhận những đóng góp nổi bật của các công ty tham gia vào sự tăng trưởng và chuyển đổi của ngành CNTT Việt Nam. Tất cả các công ty tham gia được yêu cầu phải có ít nhất 3 năm hoạt động và doanh thu 1 tỷ USD để đủ điều kiện tham gia cả ba vòng đánh giá."><i class="bx bx-plus"></i></a>
+            </div>
+          </div>
+
           <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-card">
             <div class="portfolio-img"><img src="https://blog.kms-solutions.asia/hubfs/Telecommunication%20and%20ICT%20-%20KMS%20Solutions.jpg" style="width: 1024px; height: 280px;" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
