@@ -105,7 +105,7 @@
 					</div>
 			
 					<div class="container-login100-form-btn">
-						<input class="login100-form-btn" type="submit" style="background-color: green; font-size: 20px;" value="Đăng ký tài khoản">
+						<input id="submit" class="login100-form-btn" type="submit" style="background-color: green; font-size: 20px;" value="Đăng ký tài khoản">
 					</div>
 				</form>
 
@@ -114,6 +114,51 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const submit = document.getElementById("submit");
+			submit.addEventListener("click", function(e) {
+				if (!validate()) {
+					e.preventDefault(); // Prevent form submission if validation fails
+				} else {
+					alert("Đăng ký thành công!");
+				}
+			});
+
+			function validate() {
+				// Perform your validation logic here
+
+				const email = document.querySelector("input[name=email]").value;
+				const pass = document.querySelector("input[name=pass]").value;
+				const fname = document.querySelector("input[name=fname]").value;
+				const lname = document.querySelector("input[name=lname]").value;
+				const age = document.querySelector("input[name=age]").value;
+				const phone = document.querySelector("input[name=phone]").value;
+				const gender = document.querySelector("input[name=gender]:checked");
+
+				if (email === "" || pass === "" || fname === "" || lname === "" || age === "" || phone === "" || !gender) {
+					alert("Vui lòng nhập đầy đủ thông tin!");
+					return false;
+				} else if (email.indexOf("@") === -1 || email.indexOf(".") === -1) {
+					alert("Email không hợp lệ!");
+					return false;
+				} else if (isNaN(age) || isNaN(phone)) {
+					alert("Tuổi và số điện thoại phải là số!");
+					return false;
+				} else if (age < 0 || age > 150) {
+					alert("Tuổi không hợp lệ!");
+					return false;
+				} else if (phone.length < 10 || phone.length > 11) {
+					alert("Số điện thoại không hợp lệ!");
+					return false;
+				} else {
+					return true;
+				}
+			}
+
+		});
+	</script>
 	
 </body>
 </html>
