@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 require_once('models/connection.php');
 
 if (isset($_GET['page'])) {

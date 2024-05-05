@@ -51,7 +51,7 @@
                           </div>
   
                           <div class="entry-content">
-                            <p>
+                            <p style="white-space: pre-line;">
                               ' . $news->content . '
                             </p>
                           </div>
@@ -274,8 +274,7 @@
           <div class="col-lg-8 entries">
             <!-- Entry -->
             <?php
-
-              foreach ($newses as $news) {
+              foreach ($newses as $news){
                 echo '
                   <article class="entry">
 
