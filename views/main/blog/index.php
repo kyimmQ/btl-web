@@ -95,23 +95,26 @@
                               </div><!-- End comment reply #1-->
                             ';
                             }
-                            echo '
-                            <div class="row">
-                            <div class="col-lg-1"></div>
-                            <div class="reply-form col-lg-11">
+                            if (isset($_SESSION["guest"])){
+                              
+                              echo '
                               <div class="row">
-                                <div class="col form-group">
-                                  <textarea name="comment" class="form-control" placeholder="Viết bình luận tại đây"></textarea>
+                              <div class="col-lg-1"></div>
+                              <div class="reply-form col-lg-11">
+                                <div class="row">
+                                  <div class="col form-group">
+                                    <textarea name="comment" class="form-control" placeholder="Viết bình luận tại đây"></textarea>
+                                  </div>
                                 </div>
-                              </div>
-                              <button style="background-color: green; color: white;" class="btn btn-primary btn-reply" data-news=' . $news->id . ' data-parent=' . $comment->id .' data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
-                            </form>
-                          </div></div>';
+                                <button style="background-color: green; color: white;" class="btn btn-primary btn-reply" data-news=' . $news->id . ' data-parent=' . $comment->id .' data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
+                              </form>
+                            </div></div>';
+                            }
                           }
                             
-  
-                          echo '
-                          <div class="reply-form">
+                          if (isset($_SESSION["guest"])) {
+                            echo '
+                            <div class="reply-form">
                             <h4>Bình luận</h4>
                               <div class="row">
                                 <div class="col form-group">
@@ -121,6 +124,10 @@
                               <button style="background-color: #0d6efd; color: white;" class="btn btn-primary btn-comment" data-news=' . $news->id . ' data-parent="" data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
                             </form>
                           </div>
+                            ';
+                          }
+                          echo '
+                          
   
                         </div><!-- End blog comments -->
                     </div><!-- End blog entries list -->
