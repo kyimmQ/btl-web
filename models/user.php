@@ -27,6 +27,11 @@ class User
         $this->password = $password;
     }
 
+    static function checkEmail($email)
+    {
+        return true;
+    }
+
     static function getAll()
     {
         $db = DB::getInstance();
